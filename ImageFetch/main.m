@@ -30,7 +30,7 @@ int main(int argc, const char * argv[])
         NSLog(@"The file is %lu",[data length]);
         
         BOOL written = [data writeToFile:@"/tmp/cat.png"
-                                 options:0
+                                 options:NSDataWritingAtomic
                                    error:&error];
         
         if(!written){
