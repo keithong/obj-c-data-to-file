@@ -38,6 +38,10 @@ int main(int argc, const char * argv[])
             return 1;
         }
         NSLog(@"Success!");
+        
+        NSData *readData = [NSData dataWithContentsOfFile:@"/tmp/cat.png"];
+        NSLog(@"The file read from the disk has %lu bytes", [readData length]);
+    
     }
     return 0;
 }
